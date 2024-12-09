@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Press Start 2P", cursive; /* Retro anime style font */
+}
+
+#text-overlay {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+#text-overlay .text-part {
+    font-weight: 900;
+    font-size: 4rem;
+    mix-blend-mode: difference;
+    margin-bottom: 0px;
+}
+
+#text-overlay .dots::after {
+    content: "";
+    margin-top: -10px;
+    display: inline-block;
+    font-size: 4rem;
+    animation: dots 1.5s infinite steps(3);
+}
+
+#text-overlay .subtext {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 4px;
+}
+
+@keyframes dots {
+    0% {
+        content: ".";
+    }
+    33% {
+        content: "..";
+    }
+    66% {
+        content: "...";
+    }
+    100% {
+        content: ".";
+    }
+}
